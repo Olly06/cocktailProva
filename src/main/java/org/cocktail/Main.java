@@ -44,4 +44,17 @@ public class Main {
         }
 
     }
+
+    private static HttpURLConnection getHttpURLConnection(String urlCocktailRandom) throws URISyntaxException, IOException {
+        URI uri = new URI(urlCocktailRandom); //La classe HttpURLConnection richiede di passare una classe URL
+        URL url = uri.toURL();
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection(); //Mi connetto all'indirizzo, bisogna castarlo perché
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Accept", "application/json");
+
+        if (conn.getResponseCode() != 200) {
+            throw new RuntimeException("Errore HTTP: " + conn.getResponseCode());
+        }
+        return conn;
+    }
 }
