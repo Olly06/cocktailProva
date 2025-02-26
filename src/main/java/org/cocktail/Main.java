@@ -1,10 +1,11 @@
 package org.cocktail;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,18 +14,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Main {
     public static void main(String[] args) {
 
-        String urlCocktailRandom = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+        String urlCocktailRandom = "https://www.thecocktaildb.com/api/json/v1/1/random.php"; //Url per il collegamento
 
         try{
 
-            URL url = new URL(urlCocktailRandom);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setRequestProperty("Accept", "application/json");
-
-            if (conn.getResponseCode() != 200) {
-                throw new RuntimeException("Errore HTTP: " + conn.getResponseCode());
-            }
+            HttpURLConnection conn = getHttpURLConnection(urlCocktailRandom);
 
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             StringBuilder response = new StringBuilder();

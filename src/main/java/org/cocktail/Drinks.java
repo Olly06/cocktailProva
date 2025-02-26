@@ -5,9 +5,9 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Drinks {
-    private List<Cocktail> drinks;
+    private List<Cocktail> drinks; //Da creare con le liste
 
-    // Getter and Setter
+    // Getter and Setter -> Anche qua è necessario creare i getter e setter
     public List<Cocktail> getDrinks() {
         return drinks;
     }
