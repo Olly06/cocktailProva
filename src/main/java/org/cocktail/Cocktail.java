@@ -28,36 +28,76 @@ public class Cocktail {
     private String strInstructionsZH_HANT;
 
     private String strDrinkThumb;
-    private String strIngredient1;
-    private String strIngredient2;
-    private String strIngredient3;
-    private String strIngredient4;
-    private String strIngredient5;
-    private String strIngredient6;
-    private String strIngredient7;
-    private String strIngredient8;
-    private String strIngredient9;
-    private String strIngredient10;
-    private String strIngredient11;
-    private String strIngredient12;
-    private String strIngredient13;
-    private String strIngredient14;
-    private String strIngredient15;
-    private String strMeasure1;
-    private String strMeasure2;
-    private String strMeasure3;
-    private String strMeasure4;
-    private String strMeasure5;
-    private String strMeasure6;
-    private String strMeasure7;
-    private String strMeasure8;
-    private String strMeasure9;
-    private String strMeasure10;
-    private String strMeasure11;
-    private String strMeasure12;
-    private String strMeasure13;
-    private String strMeasure14;
-    private String strMeasure15;
+
+
+    private String[] strIngredients = new String[15];
+    // Custom mapping to populate the array
+    @JsonProperty("strIngredient1")
+    public void setIngredient1(String ingredient) { strIngredients[0] = ingredient; }
+    @JsonProperty("strIngredient2")
+    public void setIngredient2(String ingredient) { strIngredients[1] = ingredient; }
+    @JsonProperty("strIngredient3")
+    public void setIngredient3(String ingredient) { strIngredients[2] = ingredient; }
+    @JsonProperty("strIngredient4")
+    public void setIngredient4(String ingredient) { strIngredients[3] = ingredient; }
+    @JsonProperty("strIngredient5")
+    public void setIngredient5(String ingredient) { strIngredients[4] = ingredient; }
+    @JsonProperty("strIngredient6")
+    public void setIngredient6(String ingredient) { strIngredients[5] = ingredient; }
+    @JsonProperty("strIngredient7")
+    public void setIngredient7(String ingredient) { strIngredients[6] = ingredient; }
+    @JsonProperty("strIngredient8")
+    public void setIngredient8(String ingredient) { strIngredients[7] = ingredient; }
+    @JsonProperty("strIngredient9")
+    public void setIngredient9(String ingredient) { strIngredients[8] = ingredient; }
+    @JsonProperty("strIngredient10")
+    public void setIngredient10(String ingredient) { strIngredients[9] = ingredient; }
+    @JsonProperty("strIngredient11")
+    public void setIngredient11(String ingredient) { strIngredients[10] = ingredient; }
+    @JsonProperty("strIngredient12")
+    public void setIngredient12(String ingredient) { strIngredients[11] = ingredient; }
+    @JsonProperty("strIngredient13")
+    public void setIngredient13(String ingredient) { strIngredients[12] = ingredient; }
+    @JsonProperty("strIngredient14")
+    public void setIngredient14(String ingredient) { strIngredients[13] = ingredient; }
+    @JsonProperty("strIngredient15")
+    public void setIngredient15(String ingredient) { strIngredients[14] = ingredient; }
+
+
+    private String[] strMeasures = new String[15];
+    // Custom mapping for Measures
+    @JsonProperty("strMeasure1")
+    public void setStrMeasure1(String value) { this.strMeasures[0] = value; }
+    @JsonProperty("strMeasure2")
+    public void setStrMeasure2(String value) { this.strMeasures[1] = value; }
+    @JsonProperty("strMeasure3")
+    public void setStrMeasure3(String value) { this.strMeasures[2] = value; }
+    @JsonProperty("strMeasure4")
+    public void setStrMeasure4(String value) { this.strMeasures[3] = value; }
+    @JsonProperty("strMeasure5")
+    public void setStrMeasure5(String value) { this.strMeasures[4] = value; }
+    @JsonProperty("strMeasure6")
+    public void setStrMeasure6(String value) { this.strMeasures[5] = value; }
+    @JsonProperty("strMeasure7")
+    public void setStrMeasure7(String value) { this.strMeasures[6] = value; }
+    @JsonProperty("strMeasure8")
+    public void setStrMeasure8(String value) { this.strMeasures[7] = value; }
+    @JsonProperty("strMeasure9")
+    public void setStrMeasure9(String value) { this.strMeasures[8] = value; }
+    @JsonProperty("strMeasure10")
+    public void setStrMeasure10(String value) { this.strMeasures[9] = value; }
+    @JsonProperty("strMeasure11")
+    public void setStrMeasure11(String value) { this.strMeasures[10] = value; }
+    @JsonProperty("strMeasure12")
+    public void setStrMeasure12(String value) { this.strMeasures[11] = value; }
+    @JsonProperty("strMeasure13")
+    public void setStrMeasure13(String value) { this.strMeasures[12] = value; }
+    @JsonProperty("strMeasure14")
+    public void setStrMeasure14(String value) { this.strMeasures[13] = value; }
+    @JsonProperty("strMeasure15")
+    public void setStrMeasure15(String value) { this.strMeasures[14] = value; }
+
+
     private String strImageSource;
     private String strImageAttribution;
     private String strCreativeCommonsConfirmed;
